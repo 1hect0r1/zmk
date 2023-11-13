@@ -37,10 +37,10 @@
         compatible = "zmk,keymap";
         default_layer {
             //  -------------------------------------------------------------------------------------------------
-            // |  GRAV |  1   |  2   |  3   |  4    |  5    |                  6    |  7     |  8   |  9    |   0   | MINUS |
-            // |  TAB  |  Q   |  W   |  E   |  R    |  T    |                  Y    |  U     |  I   |  O    |   P   | EQUAL |
-            // | RETURN|  A   |  S   |  D   |  F    |  G    |                  H    |  J     |  K   |  L    |   ;   |  '    |
-            // | SHIFT |  Z   |  X   |  C   |  V    |  B    |                  N    |  M     |  ,   |  .    |   /   | SHIFT |
+            // |  GRAV |  1   |  2   |  3   |  4    |  5    |               |  6    |  7     |  8   |  9    |   0   | MINUS |
+            // |  TAB  |  Q   |  W   |  E   |  R    |  T    |               |  Y    |  U     |  I   |  O    |   P   | EQUAL |
+            // | RETURN|  A   |  S   |  D   |  F    |  G    |      ESC      |  H    |  J     |  K   |  L    |   ;   |  '    |
+            // | SHIFT |  Z   |  X   |  C   |  V    |  B    |               |  N    |  M     |  ,   |  .    |   /   | SHIFT |
             //                       | LCMD | LOWER | SPACE | IDK   |  IDK  |  BCSP | RAISE  |  IDK |
             bindings = <
                 &kp GRAVE    &kp N1     &kp N2    &kp N3    &kp N4     &kp N5                           &kp N6     &kp N7     &kp N8     &kp N9    &kp N0     &kp MINUS
@@ -52,16 +52,16 @@
         };
         lower {
             // ------------------------------------------------------------------------------------------
-            // |   ~   |  !   |  @   |  #   |  $   |  %   |   ^   |   &   |   *  |  (   |   )   | BSPC  |
-            // |   ~   |  !   |  @   |  #   |  $   |  %   |   ^   |   &   |   *  |  (   |   )   | DEL   |
-            // |  DEL  |  F1  |  F2  |  F3  |  F4  |  F5  |  F6   |   -   |   +  |  [   |   ]   |  |    |
-            // |       |  F7  |  F8  |  F9  |  F10 |  F11 |  F12  |       | LCTL | HOME |  END  |       |
-            // | LALT  |      |      |      |      |      |       |       | NEXT | VOL- | VOL+  | PLAY  |
+            // |       |  F1  |  F2  |  F3  | F4    |  F5   |               |   F6  |  F7    |  F8  |  F9   |   F10 | F11   |
+            // |       |  7   |  8   |  9   |  /    |  *    |               |   Y   |  U     |  I   |  O    |   P   | F12   |
+            // | CAPS  |  4   |  5   |  6   |  -    |  +    |       DEL     |   H   |  J     |  K   |  L    |   ;   |  '    |
+            // |  .    |  1   |  2   |  3   |  0    |       |               |   N   |  M     |  ,   |  .    |   /   | SHIFT |
+            //                       |      |       |       |       |       |       |        |      |
             bindings = <
-                &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                              &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)        &kp LS(N0)         &kp BSPC
-                &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                              &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)        &kp LS(N0)         &kp DEL
-                &kp DEL        &kp F1      &kp F2      &kp F3      &kp F4      &kp F5              &kp C_PLAY          &kp F6      &kp MINUS   &kp PLUS    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE
-                &kp LSHIFT     &kp F7      &kp F8      &kp F9      &kp F10     &kp F11                                 &kp F12     &none       &kp LCTRL   &kp HOME          &kp END            &none
+                &kp LS(GRAVE)  &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                                  &kp F6      &kp F7      &kp F8      &kp F9            &kp F10            &kp F11
+                &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                              &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)        &kp LS(N0)         &kp F12
+                &kp DEL        &kp F1      &kp F2      &kp F3      &kp F4      &kp F5              &kp DEL             &kp F6      &kp MINUS   &kp PLUS    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE
+                &kp LSHIFT     &kp F7      &kp F8      &kp F9      &kp F10     &kp F11                                 &kp F12     &none       &kp LCTRL   &kp HOME          &kp NUBS            &none
                                                        &none       &trans      &none       &kp C_VOL_DN  &kp C_VOL_UP  &none       &mo RAISE   &kp C_NEXT
                 >;
         };
